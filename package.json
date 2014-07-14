@@ -1,0 +1,11 @@
+{
+  "name": "chatwork.md",
+  "version": "0.0.0",
+  "description": "display pretty message on Chatwork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jigsaw (http://jgs.me)",
+  "license": "MIT"
+}
