@@ -1,6 +1,6 @@
 {
   "name": "chatwork.md",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "display pretty message on Chatwork",
   "main": "index.js",
   "scripts": {
