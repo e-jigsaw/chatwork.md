@@ -18,10 +18,9 @@ applyMD = ->
         div.innerHTML += img.outerHTML
       for quote in quotes
         div.innerHTML += quote.outerHTML
-      url = pre.textContent.match(/([^\(|\[]|^)(https?)(:\/\/[-_.!~*¥'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)([^\)|\]]|$)/)
+      url = pre.textContent.match(/([^\(|\[]|^)(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)([^\)|\]]|$)/)
       if url isnt null
-        re = new RegExp url[0]
-        pre.textContent = pre.textContent.replace re, "[#{url[0]}](#{url[0]})"
+        pre.textContent = pre.textContent.replace url[0], "[#{url[0]}](#{url[0]})"
       div.innerHTML += markdown.toHTML pre.textContent
       div.classList.add 'markdown-body'
       messageArea.replaceChild div, messageArea.querySelector('pre')
