@@ -11,6 +11,10 @@ applyMD = ->
       div.innerHTML += re.outerHTML
     for img in imgs
       div.innerHTML += img.outerHTML
+    url = pre.textContent.match(/^(https?)(:\/\/[-_.!~*¥'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/)
+    if url isnt null
+      re = new RegExp url[0]
+      pre.textContent = pre.textContent.replace re, "[#{url[0]}](#{url[0]})"
     div.innerHTML += markdown.toHTML pre.textContent
     messageArea.replaceChild div, messageArea.querySelector('pre')
 
