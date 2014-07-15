@@ -33,6 +33,10 @@ display pretty message on Chatwork
 
 # changelog
 
+## v0.0.6
+
+* :bug: fix url matcher
+
 ## v0.0.5
 
 * :bug: quote display bug fix
