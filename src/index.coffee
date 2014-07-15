@@ -3,16 +3,21 @@ applyMD = ->
     pre = messageArea.querySelector 'pre'
     info = messageArea.querySelectorAll '.chatInfo'
     if info.length is 0
+      quotes = messageArea.querySelectorAll '.chatQuote'
+      div = document.createElement 'div'
+      for quote in quotes
+        quote.remove()
       tos = messageArea.querySelectorAll '.chatTimeLineTo'
       res = messageArea.querySelectorAll '.chatTimeLineReply'
       imgs = messageArea.querySelectorAll 'img'
-      div = document.createElement 'div'
       for to in tos
         div.innerHTML += to.outerHTML
       for re in res
         div.innerHTML += re.outerHTML
       for img in imgs
         div.innerHTML += img.outerHTML
+      for quote in quotes
+        div.innerHTML += quote.outerHTML
       url = pre.textContent.match(/([^\(|\[]|^)(https?)(:\/\/[-_.!~*¥'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)([^\)|\]]|$)/)
       if url isnt null
         re = new RegExp url[0]
