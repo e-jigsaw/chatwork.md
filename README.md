@@ -31,6 +31,18 @@ display pretty message on Chatwork
 % grunt build
 ```
 
+# changelog
+
+## v0.0.2
+
+* new feature: url auto replace
+* new feature: github stylesheet applied
+* :bug: fix minor bugs
+
+## v0.0.1
+
+* first release
+
 # License
 
 The MIT License (MIT)
