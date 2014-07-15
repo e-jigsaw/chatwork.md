@@ -1,22 +1,24 @@
 applyMD = ->
   for messageArea in document.querySelectorAll('.chatTimeLineMessageArea')
     pre = messageArea.querySelector 'pre'
-    tos = messageArea.querySelectorAll '.chatTimeLineTo'
-    res = messageArea.querySelectorAll '.chatTimeLineReply'
-    imgs = messageArea.querySelectorAll 'img'
-    div = document.createElement 'div'
-    for to in tos
-      div.innerHTML += to.outerHTML
-    for re in res
-      div.innerHTML += re.outerHTML
-    for img in imgs
-      div.innerHTML += img.outerHTML
-    url = pre.textContent.match(/^(https?)(:\/\/[-_.!~*¥'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/)
-    if url isnt null
-      re = new RegExp url[0]
-      pre.textContent = pre.textContent.replace re, "[#{url[0]}](#{url[0]})"
-    div.innerHTML += markdown.toHTML pre.textContent
-    messageArea.replaceChild div, messageArea.querySelector('pre')
+    info = messageArea.querySelectorAll '.chatInfo'
+    if info.length is 0
+      tos = messageArea.querySelectorAll '.chatTimeLineTo'
+      res = messageArea.querySelectorAll '.chatTimeLineReply'
+      imgs = messageArea.querySelectorAll 'img'
+      div = document.createElement 'div'
+      for to in tos
+        div.innerHTML += to.outerHTML
+      for re in res
+        div.innerHTML += re.outerHTML
+      for img in imgs
+        div.innerHTML += img.outerHTML
+      url = pre.textContent.match(/^(https?)(:\/\/[-_.!~*¥'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/)
+      if url isnt null
+        re = new RegExp url[0]
+        pre.textContent = pre.textContent.replace re, "[#{url[0]}](#{url[0]})"
+      div.innerHTML += markdown.toHTML pre.textContent
+      messageArea.replaceChild div, messageArea.querySelector('pre')
 
 window.onload = ->
   target = document.querySelector '#_timeLine'
