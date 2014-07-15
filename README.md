@@ -33,6 +33,10 @@ display pretty message on Chatwork
 
 # changelog
 
+## v0.0.3
+
+* :bug: minor bug fix
+
 ## v0.0.2
 
 * new feature: url auto replace
