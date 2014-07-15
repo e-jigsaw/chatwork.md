@@ -7,4 +7,5 @@ manifest_version: 2
 content_scripts: [
   matches: ['https://kcw.kddi.ne.jp/*']
   js: ['md.js', 'index.js']
+  css: ['style.css']
 ]

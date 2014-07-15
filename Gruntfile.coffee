@@ -14,6 +14,7 @@ module.exports = (grunt)->
       lib:
         files:
           'build/md.js': 'markdown-browser-0.6.0-beta1/markdown.min.js'
+          'build/style.css': 'github-markdown-css-0.2.0/github-markdown.css'
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-cson'

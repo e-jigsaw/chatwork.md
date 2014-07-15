@@ -18,6 +18,7 @@ applyMD = ->
         re = new RegExp url[0]
         pre.textContent = pre.textContent.replace re, "[#{url[0]}](#{url[0]})"
       div.innerHTML += markdown.toHTML pre.textContent
+      div.classList.add 'markdown-body'
       messageArea.replaceChild div, messageArea.querySelector('pre')
 
 window.onload = ->
