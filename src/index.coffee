@@ -19,3 +19,4 @@ window.onload = ->
   observer = new MutationObserver (mutations)-> applyMD()
   observer.observe target,
     childList: true
+  applyMD()
