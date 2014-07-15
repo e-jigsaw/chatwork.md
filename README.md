@@ -27,6 +27,7 @@ display pretty message on Chatwork
 ## build
 
 ```
+% npm install
 % grunt build
 ```
 
