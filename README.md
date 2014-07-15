@@ -33,6 +33,10 @@ display pretty message on Chatwork
 
 # changelog
 
+## v0.0.5
+
+* :bug: quote display bug fix
+
 ## v0.0.4
 
 * :bug: minor bug fix
