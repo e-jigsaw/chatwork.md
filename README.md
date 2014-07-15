@@ -30,7 +30,7 @@ display pretty message on Chatwork
 % grunt build
 ```
 
-## License
+# License
 
 The MIT License (MIT)
 
