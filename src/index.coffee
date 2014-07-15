@@ -26,4 +26,8 @@ window.onload = ->
   observer = new MutationObserver (mutations)-> applyMD()
   observer.observe target,
     childList: true
+  textarea = document.querySelector('#_chatText')
+  textareaObserver = new MutationObserver (mutations)-> target.scrollTop = 9999999999 if textarea.value.length is 0
+  textareaObserver.observe textarea,
+    attributes: true
   applyMD()
