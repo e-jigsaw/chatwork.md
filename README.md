@@ -28,10 +28,15 @@ display pretty message on Chatwork
 
 ```
 % npm install
-% grunt build
+% grunt
 ```
 
 # changelog
+
+## v0.1.0
+
+* change markdown parser
+* update github markdown css
 
 ## v0.0.6
 
