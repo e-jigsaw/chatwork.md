@@ -13,11 +13,11 @@ module.exports = (grunt)->
     copy:
       lib:
         files:
-          'build/md.js': 'markdown-browser-0.6.0-beta1/markdown.min.js'
-          'build/style.css': 'github-markdown-css-0.2.0/github-markdown.css'
+          'build/md.js': 'marked/marked.min.js'
+          'build/style.css': 'github-markdown-css/github-markdown.css'
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-cson'
   grunt.loadNpmTasks 'grunt-contrib-copy'
 
-  grunt.registerTask 'build', ['coffee', 'cson', 'copy']
+  grunt.registerTask 'default', ['coffee', 'cson', 'copy']

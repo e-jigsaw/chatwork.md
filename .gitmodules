@@ -1,0 +1,6 @@
+[submodule "marked"]
+	path = marked
+	url = https://github.com/chjj/marked.git
+[submodule "github-markdown-css"]
+	path = github-markdown-css
+	url = https://github.com/sindresorhus/github-markdown-css.git

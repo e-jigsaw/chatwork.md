@@ -21,7 +21,7 @@ applyMD = ->
       url = pre.textContent.match(/([^\(|\[]|^)(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)([^\)|\]]|$)/)
       if url isnt null
         pre.textContent = pre.textContent.replace url[0], "[#{url[0]}](#{url[0]})"
-      div.innerHTML += markdown.toHTML pre.textContent
+      div.innerHTML += marked pre.textContent
       div.classList.add 'markdown-body'
       messageArea.replaceChild div, messageArea.querySelector('pre')
 
