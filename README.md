@@ -28,6 +28,8 @@ display pretty message on Chatwork
 
 ```
 % npm install
+% git submodule init
+% git submodule update
 % grunt
 ```
 
