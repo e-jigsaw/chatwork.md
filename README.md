@@ -1,5 +1,6 @@
 chatwork.md
 ===========
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/e-jigsaw/chatwork.md?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 display pretty message on Chatwork
 
